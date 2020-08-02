@@ -16,8 +16,9 @@ class SessionsController < ApplicationController
     end
 
     if user && info
-      puts "INFO: #{info}"
-      session[:user_id] = user.id
+      user.handle = info['nickname']
+      user.name = info['name']
+      user.save! if user.changed?
     end
 
     origin = request.env['omniauth.origin']
