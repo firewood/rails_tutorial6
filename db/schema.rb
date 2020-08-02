@@ -13,8 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_07_31_140351) do
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "handle"
+    t.string "provider", default: "", null: false
+    t.string "uid", default: "", null: false
+    t.string "name", default: "", null: false
+    t.string "handle", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
