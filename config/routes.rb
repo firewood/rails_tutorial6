@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get '/help', :to => 'static_pages#help'
+  get '/test', :to => 'static_pages#test'
 
   get '/auth/:provider/callback', :to => 'sessions#callback'
   post '/auth/:provider/callback', :to => 'sessions#callback'

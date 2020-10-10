@@ -1,0 +1,28 @@
+<h1>StaticPages#test</h1>
+
+<div id="app">
+  <p>{{message}}</p>
+  <a :[attribute]="url">Google</a>
+  <a :href="urlTwitter" :id="number">Twitter</a>
+  <a v-bind="twitterObject">Twitter 2</a>
+  <p>current number: {{number}}</p>
+  <p v-on:mousemove="changeMousePosition($event, 2)">
+    mouse move detection
+    <span v-on:mousemove.stop>not detected here</span>
+  </p>
+  <p>{{ lessThanThree }}</p>
+  <p>X: {{x}}, Y: {{y}}</p>
+  <input type="text" v-on:keyup.enter.space="myAlert" >
+  <a v-on:click.prevent href="https://www.google.com">Google (not open)</a>
+  <button v-on:click="number += 1">count +1</button>
+  <button v-on:click="countUp(2)">count +2</button>
+  <button v-on:click="reverseMessage">reverse message</button>
+  <button v-on:[countevent]="countUp(3)">count +3</button>
+  <button @[countevent]="countUp(3)">count +3</button>
+
+  <input text="text" v-model="message">
+
+</div>
+
+
+
