@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
+
+  get 'atcoder', to: 'static_pages#home'
+  get 'atcoder/*path', to: 'static_pages#home'
+
   get '/help', :to => 'static_pages#help'
 
   get '/auth/:provider/callback', :to => 'sessions#callback'
