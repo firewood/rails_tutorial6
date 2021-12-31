@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
   def help
   end
+
+  def atcoder
+  end
+
+  def topcoder
+  end
 end
